@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from wiki import views
 """
 CHALLENGES:
     1. Uncomment the path() for the wiki app below. Use it to direct any request (except `/admin` URLs)
@@ -27,5 +27,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # Wiki App
-    # path('REPLACE_ME_WITH_ROUTE', include(REPLACE_ME_WITH_APP_URLS)),
+    path('wiki/', include('wiki.urls')),
 ]
